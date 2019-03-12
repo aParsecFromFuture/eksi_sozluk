@@ -1,4 +1,5 @@
 <?php
+	//sol framedeki konuların url'lerini döndürür.
 	function getTopTopics(){
 		$arr = array();
 	   	$url = "https://eksisozluk.com/";
@@ -19,7 +20,8 @@
 		}
 		return $arr;
 	}
-   
+
+	//tek bir sayfadaki entry girmiş yazarların nicklerini döndürür.
 	function getUsers($html){
 		$arr = array();
 		$doc = new DOMDocument();
@@ -31,7 +33,8 @@
 	   	}
 		return $arr;
 	}
-   
+
+	//birden fazla sayfadaki entry girmiş yazarların nicklerini döndürür.
 	function getData($pages){
 		$data = array();
 		$ch = curl_init();
